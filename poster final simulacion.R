@@ -79,7 +79,7 @@ dat <- datos %>% group_by(n) %>%
 
 dat
 
-# Gr醘icos de comparaci髇 -----------------------------------------------------
+# Gr谩ficos de comparaci贸n -----------------------------------------------------
 
 
 
@@ -88,7 +88,7 @@ dat
 betacero <- ggplot(dat)+geom_line(aes(x=n,y=intercept,colour="lm"),size=1.2)+
   geom_line(aes (x=n,y=intercept_bay,colour="bayes"),size=1.2)+
   geom_hline(yintercept=beta0,size=1)+
-  labs(title = "Comparaci髇 de (Beta_0 lm) vs (Beta_0 Bayes)",
+  labs(title = "Comparaci贸n de (Beta_0 lm) vs (Beta_0 Bayes)",
        subtitle = "beta 0 esperado = 2627.82",
         y="Beta 0",x="Numero de Datos",
        color="Modelos")
@@ -96,7 +96,7 @@ betacero <- ggplot(dat)+geom_line(aes(x=n,y=intercept,colour="lm"),size=1.2)+
 betauno <- ggplot(dat) + geom_line(aes(x=n,y=slope_lm,colour="lm"),size=1.2)+
   geom_line(aes(x=n,y=slope_bayes,colour="bayes"),size=1) +
   geom_hline(yintercept = beta1,size=1) +
-  labs(title = "Comparaci髇 de (Beta 1 lm) vs (Beta 1 Bayes)",
+  labs(title = "Comparaci贸n de (Beta 1 lm) vs (Beta 1 Bayes)",
        subtitle = "beta 1 esperado = - 37.15",
        y="Beta 1",x="Numero de Datos",
        color="Modelos")
@@ -105,7 +105,7 @@ betauno <- ggplot(dat) + geom_line(aes(x=n,y=slope_lm,colour="lm"),size=1.2)+
 sigma <- ggplot(dat)+geom_line(aes(x=n,y=sigma_lm,colour="lm"),size=1)+
   geom_line(aes(x=n,y=sigma_bayes^0.5,colour="bayes"),size=1)+
   geom_hline(yintercept = sig,size=1)+
-  labs(title = "Comparaci髇 de (sigma lm) vs (sigma Bayes)",
+  labs(title = "Comparaci贸n de (sigma lm) vs (sigma Bayes)",
        subtitle = "Sigma esperado = 96.149",
        y="Sigma",x="Numero de Datos",
        color="Modelos")
